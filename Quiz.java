@@ -4,56 +4,57 @@ import java.util.Scanner;
 public class Quiz {
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
-       
+
+    
         int score = 0;
 
         System.out.println("1. ¿Quién fue la hacker que escribió en 1994 Hacking the Wetware? \n a. Ada Lovelace \n b. Jude Milhon \n c. Martha Ackelsberg \n d. Jane Jacobs");
+        System.out.println("Escribe la letra de tu respuesta (a, b, c o d):");
         String optionInput1 = scanner.nextLine().toLowerCase();
       
         if (optionInput1.equals("b")){
             score +=5;
-            System.out.print("Tu respuesta fue: " + optionInput1 + ". Respuesta correcta. Ganaste 5 puntos.");  
-            scanner.nextLine();   
+            System.out.println("Tu respuesta fue: " + optionInput1 + ". Respuesta correcta. Ganaste 5 puntos.");     
         } else {
-            System.out.print("Fail. Intenta la próxima. No puntuas");
+            System.out.println("Fail. Intenta la próxima. No puntuas");
         }
 
-        System.out.println("2. ¿Quién es Fuencisla Clemares? \n a. La directora general de IBM Europa, Oriente Medio y África \n b. La vicepresidenta de Microsoft Western Europe \n c. La directora general de Google en España y Portugal \n d. Fundadora y CEO de Marsi Bionics");
+        System.out.println("\n2. ¿Quién es Fuencisla Clemares? \n a. La directora general de IBM Europa, Oriente Medio y África \n b. La vicepresidenta de Microsoft Western Europe \n c. La directora general de Google en España y Portugal \n d. Fundadora y CEO de Marsi Bionics");
+        System.out.println("Escribe la letra de tu respuesta (a, b, c o d):");
         String optionInput2 = scanner.nextLine().toLowerCase();
         if (optionInput2.equals("c")){
             score +=5;
-            System.out.print("Tu respuesta fue: " + optionInput2 + ". Respuesta correcta. Ganaste 5 puntos.");  
-            scanner.nextLine();        
+            System.out.println("Tu respuesta fue: " + optionInput2 + ". Respuesta correcta. Ganaste 5 puntos.");      
          } else {
-            System.out.print("Fail. Intenta la próxima. No puntuas");
+            System.out.println("Fail. Intenta la próxima. No puntuas");
         }
         
-        System.out.println("3. ¿Quién fue Hedwig Eva Maria Kiesler, conocida como Hedy Lamarr? \n a. Primera programadora de software \n b. Una actriz de cine \n c. Inventora del procesador de datos \n d. Inventora del sistema de comunicaciones de salto de frecuencia, base del wifi, bluetooth y GPS");
+        System.out.println("\n3. ¿Quién fue Hedwig Eva Maria Kiesler, conocida como Hedy Lamarr? \n a. Primera programadora de software \n b. Una actriz de cine \n c. Inventora del procesador de datos \n d. Inventora del sistema de comunicaciones de salto de frecuencia, base del wifi, bluetooth y GPS");
+        System.out.println("Escribe la letra de tu respuesta (para respuestas múltiples, escribe las letras juntas, ej: bd):");
         String optionInput3 = scanner.nextLine().toLowerCase();
-        if (optionInput3.equals("c") || optionInput3.equals("d")){
+        if (optionInput3.equals("bd")){
             score +=5;
-            System.out.print("Tu respuesta fue: " + optionInput2 + ". Respuesta correcta. Ganaste 5 puntos.");  
-            scanner.nextLine();        
+            System.out.println("Tu respuesta fue: " + optionInput3 + ". Respuesta correcta. Ganaste 5 puntos.");      
          } else {
-            System.out.print("Fail. Intenta la próxima. No puntuas");
+            System.out.println("Fail. Intenta la próxima. No puntuas");
         }
 
-        System.out.println("4. ¿Cómo se llamaban las principales 'mujeres ocultas' de la NASA, encargadas de los cálculos para que la misión del Apolo 11 concluyera con éxito? \n a. Katherine Johnson, Dorothy Vaughan y Mary Jackson \n b. Jessica Miller, Emily Johnson, Sarah Davis \n c. bell hooks, Toni Morrison y Alice Walker \n d. Emmeline Pankhurst, Millicent Fawcett y Harriet Harman");
+        System.out.println("\n4. ¿Cómo se llamaban las principales 'mujeres ocultas' de la NASA, encargadas de los cálculos para que la misión del Apolo 11 concluyera con éxito? \n a. Katherine Johnson, Dorothy Vaughan y Mary Jackson \n b. Jessica Miller, Emily Johnson, Sarah Davis \n c. bell hooks, Toni Morrison y Alice Walker \n d. Emmeline Pankhurst, Millicent Fawcett y Harriet Harman");
+        System.out.println("Escribe la letra de tu respuesta (a, b, c o d):");
         String optionInput4 = scanner.nextLine().toLowerCase();
         if (optionInput4.equals("a")){
             score +=5;
-            System.out.print("Tu respuesta fue: " + optionInput4 + ". Respuesta correcta. Ganaste 5 puntos.");  
-            scanner.nextLine();        
+            System.out.println("Tu respuesta fue: " + optionInput4 + ". Respuesta correcta. Ganaste 5 puntos.");      
         } else {
-            System.out.print("Fail. Intenta la próxima. No puntuas");
-            scanner.nextLine();
+            System.out.println("Fail. Intenta la próxima. No puntuas");
         }
         scanner.close();
       
+        System.out.println("\nTu puntaje final es: " + score + "/20");
 
         if (score >= 15){
             System.out.println("Tú si que sabes mucho");
-        } else if ( score >= 5 && score < 15){
+        } else if (score >= 5){
             System.out.println("No lo has hecho mal");
         } else {
             System.out.println("Buena suerte la próxima vez");
